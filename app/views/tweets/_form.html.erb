@@ -1,0 +1,21 @@
+<h1>Tweets</h1>
+<%= form_with model: @tweet do |form| %>
+    <% if form.object.errors.any? %>
+        <h2><%= pluralize(form.object.errors.count, "error") %>
+        prohibited this Tweet from being saved: </h2>
+
+        <ul>
+            <% form.object.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+            <% end %>
+        </ul>
+    <% end %>
+     
+    <div>
+        <%= form.text_area :body, placeholder: "What's on your mind?" %>
+    </div>
+
+    <div>
+        <%= form.submit "Tweet" %>
+    </div>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>Tweets</h1>
+
+<%= link_to "New Tweet", new_tweet_path %>
+
+<ul>
+    <% @tweets.each do |tweet| %>
+        <li>
+            <div>
+                <p><%= tweet.body %></p>
+                <p>Posted by <%= tweet.user.email %></p>
+                <p>Published on <%= tweet.created_at.strftime("%m/%d/%Y %H:%M") %></p>
+            </div>
+            <br>
+        </li>
+    <% end %>
+</ul>
+
