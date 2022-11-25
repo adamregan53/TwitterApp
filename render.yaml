@@ -1,6 +1,6 @@
 databases:
   - name: TwitterApp
-    databaseName: TwitterApp
+    databaseName: TwitterApp_production
     user: adam
 
 services:
