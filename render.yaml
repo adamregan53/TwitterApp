@@ -1,9 +1,11 @@
 databases:
   - name: adam
+    databaseName: adam
+    user: adam
 
 services:
   - type: web
-    name: TwitterApp
+    name: adam
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
