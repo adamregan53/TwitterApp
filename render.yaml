@@ -1,7 +1,7 @@
 databases:
-  - name: TwitterApp
-    databaseName: TwitterApp_production
-    user: adam
+  - name: twitterapp
+    databaseName: twitterapp
+    user: twitterapp
 
 services:
   - type: web
